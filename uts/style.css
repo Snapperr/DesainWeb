@@ -1,0 +1,126 @@
+/* General styles for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+    background-color: #F36F25;
+    color: white;
+    padding: 15px;
+    display: flex; /* Flex container for header */
+    justify-content: space-between; /* Aligns logo and nav to opposite sides */
+    align-items: center; /* Vertically centers items */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    display: flex; /* Flex container for nav */
+    gap: 20px; /* Space between links */
+}
+
+/* Navigation Link Styles */
+nav a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Login form container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #F36F25;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px 0 10px; /* Space above and below the heading */
+    color: black; /* Change color to black */
+}
+
+/* Content styles */
+.content {
+    margin: 20px; /* Add margin */
+    text-align: left; /* Align text to the left */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    max-width: 400px; /* Limit form width */
+}
+
+/* Input and Button Styles */
+input[type="number"],
+select {
+    margin-bottom: 15px; /* Space between inputs */
+    padding: 10px; /* Add some padding */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px; /* Add padding to the button */
+    background-color: #F36F25; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+button:hover {
+    background-color: #e9651f; /* Change background on hover */
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* Banner Image Styles */
+#banner {
+    width: 25%; /* Make the banner take full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's a block element */
+    margin: 0; /* Remove margin to allow full extension */
+    padding: 0; /* Remove padding if any */
+}
+
+/* Footer styles */
+footer {
+    background-color: #F36F25;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
