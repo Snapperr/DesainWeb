@@ -6,8 +6,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 $totalPrice = "";
-$totalDiscount = 0; // Initialize total discount
-$totalPayment = 0; // Initialize total payment
+$totalDiscount = 0; 
+$totalPayment = 0; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $floor = $_POST['floor'];
@@ -15,25 +15,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $days = $_POST['days'];
     $discount = $_POST['discount'];
 
-    // Base prices for each room type
     $roomPrices = ['standard' => 5000, 'superior' => 6000, 'deluxe' => 7000];
     $basePrice = $roomPrices[$roomType] * $days;
     
-    // Floor surcharge
     $floorSurcharge = ($floor > 5) ? 1000 : 0;
     
-    // Calculate total price
     $totalPrice = $basePrice + $floorSurcharge;
 
-    // Discount application
     if ($discount == 'member') {
-        $totalDiscount = $totalPrice * 0.1; // 10% discount
+        $totalDiscount = $totalPrice * 0.1; 
         $totalPayment = $totalPrice - $totalDiscount;
     } elseif ($discount == 'birthday') {
-        $totalDiscount = 500; // Fixed discount
+        $totalDiscount = 500; 
         $totalPayment = $totalPrice - $totalDiscount;
     } else {
-        $totalPayment = $totalPrice; // No discount
+        $totalPayment = $totalPrice; 
     }
 }
 ?>

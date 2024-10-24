@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Dummy validation for the sake of this example (replace with actual validation)
     if (empty($username) || empty($password)) {
         $error = "Please fill in both fields.";
     } elseif ($username == 'admin' && $password == 'admin') {
